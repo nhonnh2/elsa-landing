@@ -1,0 +1,353 @@
+@font-face {
+    src: url(../fonts/brown.otf);
+    font-family: bro;
+}
+
+:root {
+    --primary: #06bae8;
+    --primary-bg: linear-gradient( to right, rgba(87, 179, 255, 1) 0%, rgba(61, 255, 200, 1) 51%, rgba(87, 179, 255, 1) 100%);
+}
+
+
+/* reset style */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* body default style */
+
+body {
+    font-family: 'bro', sans-serif;
+    font-weight: 400;
+    color: #636363;
+    background-color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* header and logo style */
+
+header {
+    position: fixed;
+    box-shadow: 0 0 12px 0 rgb(0 0 0 / 50%);
+    width: 100%;
+    top: 0;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+header .logo__content {
+    padding: 1rem 0;
+}
+
+header .logo__content img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* intro style */
+
+.intro {
+    height: 450px;
+    margin-top: 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.intro__bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 99;
+}
+
+.intro__bg img {
+    position: absolute;
+}
+
+.intro__bg .intro_img_1 {
+    top: 50%;
+}
+
+.intro__bg .intro_img_2 {
+    bottom: -10%;
+    right: 0;
+}
+
+.intro__content {
+    display: flex;
+    position: absolute;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.intro__content .intro__left {
+    width: 55%;
+    padding: 5rem 5rem 6rem 0;
+}
+
+.intro__content .intro__img {
+    width: 45%;
+}
+
+.intro__content .intro__left * {
+    margin-bottom: 1.2rem;
+}
+
+.intro__content .intro__left h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: black;
+}
+
+.intro__content .intro__left p {
+    color: var(--primary);
+}
+
+.intro__content .intro__left a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: block;
+    box-shadow: 0px 4px 8px rgba(46, 153, 241, 0.5);
+    width: 220px;
+    height: 55px;
+    line-height: 55px;
+    margin: 0 auto;
+    margin-top: 1.6rem;
+    border-radius: 23px;
+    background-image: var(--primary-bg);
+    background-size: 200%;
+    color: #fff;
+    transition: all 0.25s linear;
+}
+
+.intro__content .intro__left a:hover {
+    background-position: right center;
+    transform: scale(1.05);
+}
+
+.intro__content .intro__img {
+    position: relative;
+}
+
+.intro__content .intro__img img {
+    position: absolute;
+}
+
+.intro__content .intro__img .intro_media_img {
+    left: 5%;
+    bottom: -7%;
+}
+
+.intro__content .intro__img .intro_phone13_img {
+    bottom: 0;
+    left: 10%;
+}
+
+
+/* register style */
+
+.register {
+    background: #0c2440;
+    height: 900px;
+    overflow: hidden;
+    position: relative;
+}
+
+.register .register__bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+}
+
+.register__bg img {
+    position: absolute;
+}
+
+.register__bg .register__img {
+    right: 0;
+}
+
+.register__bg .register__img1 {
+    top: 640px;
+    right: 33%;
+}
+
+.register__bg .register__img3 {
+    top: 592px;
+    right: 45%;
+}
+
+.register__bg .register__img2 {
+    top: 472px;
+    right: 4%;
+}
+
+.register__bg .register__img4 {
+    top: 175px;
+    right: 17%;
+}
+
+.register__bg .phone__15 {
+    right: 1%;
+    top: 125px;
+}
+
+.register #register__form {
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+
+.register #register__form form {
+    width: 38%;
+    height: 85%;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fff;
+    margin-top: 64px;
+    margin-left: 131px;
+}
+
+.register #register__form .register__header_form {
+    height: 23%;
+    background: linear-gradient(81.84deg, #49dce1 1.09%, #39a3fb 96.86%);
+    box-shadow: 0px 4px 8px rgba(46, 153, 241, 0.5);
+    padding: 2rem 5rem;
+}
+
+.register__header_form h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 1.9rem;
+    text-transform: uppercase;
+}
+
+#register__form .register__body_form {
+    padding: 2rem;
+}
+
+.register__body_form label {
+    display: block;
+    color: var(--primary);
+    font-size: 1.25rem;
+    margin-bottom: 0.4rem;
+}
+
+.register__body_form label i {
+    margin-right: 8px;
+}
+
+.register__body_form>div {
+    margin-bottom: 1.2rem;
+}
+
+.register__body_form input {
+    height: 52px;
+    width: 100%;
+    border: 1px solid #57b3ff;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.8rem;
+    padding-left: 1rem;
+}
+
+.register__body_form input:focus {
+    outline: 1px solid #00d9ff;
+}
+
+.field_checkRadio {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.field_checkRadio [type='radio']:checked,
+.field_checkRadio [type='radio']:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+[type='radio']:checked+label,
+[type='radio']:not(:checked)+label {
+    position: relative;
+    padding-left: 60px;
+    cursor: pointer;
+    line-height: 40px;
+    display: inline-block;
+    color: black;
+}
+
+[type='radio']:checked+label:before,
+[type='radio']:not(:checked)+label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #57b3ff;
+    background: #fff;
+}
+
+[type='radio']:checked+label:after,
+[type='radio']:not(:checked)+label:after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: #29b3dd;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+[type='radio']:not(:checked)+label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+#oneyear:not(:checked)+.price1 {
+    display: none;
+}
+
+[type='radio']:checked+label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.form_price {
+    font-weight: 600;
+    font-size: 1.5em;
+    color: #0bbae7;
+    text-align: center;
+    margin-top: 2.3rem;
+}
+
+.register__footer_form {
+    padding: 0 2rem 3rem 2rem;
+}
+
+.register__footer_form button {
+    border: none;
+    text-transform: uppercase;
+    width: 100%;
+    color: #fff;
+    height: 70px;
+    background-image: var(--primary-bg);
+    background-size: 200%;
+    border-radius: 20px;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
