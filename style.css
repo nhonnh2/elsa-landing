@@ -671,3 +671,10 @@ input[type='number'] {
         width: 55%;
     }
 }
+
+@media screen and (max-width: 500px) {
+    .register__footer_form button {
+        width: 70%;
+        font-size: 1.1rem;
+    }
+}
