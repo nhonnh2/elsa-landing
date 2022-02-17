@@ -23,17 +23,14 @@
         <div class="intro__bg">
             <img class="intro_img_1" src="./assets/img/intro/intro_img1.png">
             <img class="intro_img_2" src="./assets/img/intro/intro_img2.png">
+            <img class="intro_media_img" src="./assets/img/intro/intro_media_img.png">
+            <img class="intro_phone13_img" src="./assets/img/intro/intro_phone13_img.png">
         </div>
         <div class="intro__content">
-            <div class="intro__left">
-                <h2>app luyện nói <br/> & giao tiếp tiếng anh thời 4.0</h2>
-                <p>Với ELSA Speak - Ai Cũng Có Thể Nói Tiếng Anh Hay!</p>
-                <a href="#register__form">Đăng ký ngay</a>
-            </div>
-            <div class="intro__img">
-                <img class="intro_media_img" src="./assets/img/intro/intro_media_img.png">
-                <img class="intro_phone13_img" src="./assets/img/intro/intro_phone13_img.png">
-            </div>
+            <h2>app luyện nói <br/> & giao tiếp tiếng anh thời 4.0</h2>
+            <p>Với ELSA Speak - Ai Cũng Có Thể Nói Tiếng Anh Hay!</p>
+            <a href="#register__form">Đăng ký ngay</a>
+
         </div>
     </section>
     <!-- register section -->
@@ -53,16 +50,28 @@
                 </div>
                 <div class="register__body_form">
                     <div class="field_username">
-                        <label for="username"><i class="fas fa-user"></i> Họ tên</label>
-                        <input type="text" name="username" id="username" required>
+                        <label for="username">
+                            <i class="fas fa-user"></i> <span class="label_text"> Họ tên</span>
+                            <p class="field_err"></p>
+                        </label>
+                        <input type="text" name="username" id="username" oninput="validateUsername()" />
+
                     </div>
                     <div class="field_numberphone">
-                        <label for="phone"><i class="fas fa-phone-alt"></i> Số điện thoại</label>
-                        <input type="text" name="phone" id="phone" required>
+                        <label for="phone">
+                            <i class="fas fa-phone-alt"></i><span class="label_text"> Số điện thoại</span>
+                            <p class="field_err"></p>
+                        </label>
+                        <input type="number" name="phone" id="phone" oninput="validateNumberPhone()" />
+
                     </div>
                     <div class="field_email">
-                        <label for="email"><i class="fas fa-phone-alt"></i> Email</label>
-                        <input type="text" name="email" id="email" required>
+                        <label for="email">
+                            <i class="fas fa-envelope"></i><span class="label_text"> Email</span> 
+                            <p class="field_err"></p>
+                        </label>
+                        <input type="text" name="email" id="email" oninput="validateEmail()" />
+
                     </div>
                     <div class="field_checkRadio">
                         <input type="radio" id="oneyear" name="register__radioGroup">
@@ -76,13 +85,59 @@
                 </div>
 
                 <div class="register__footer_form">
-                    <button type="submit">gửi đăng ký</button>
+                    <button type="button" onclick="validateForm()">gửi đăng ký</button>
                 </div>
 
             </form>
 
         </div>
 
+    </section>
+    <!-- study route section -->
+    <section class="study_route">
+        <div class="study_route__container">
+            <div class="study_route__header">
+                <h2>cá nhân hóa lộ trình học</h2>
+                <p>Làm bài kiểm tra đầu vào với ELSA trong 5 phút và bạn sẽ có:</p>
+            </div>
+            <div class="study_route__list">
+                <div class="study_route__item">
+                    <div class="study_route__img">
+                        <img src="./assets/img/study_route/phone12_1.png" alt="img loading">
+                    </div>
+                    <div class="study_route__text">
+                        <p>Trí tuệ nhân tạo trả về bạn số điểm <b>“CHUẨN BẢN XỨ"</b></p>
+                    </div>
+                </div>
+                <div class="study_route__item">
+                    <div class="study_route__img">
+                        <img src="./assets/img/study_route/phone12_2.png" alt="img loading">
+                    </div>
+                    <div class="study_route__text">
+                        <p><b> NGAY LẬP TỨC</b>, bạn biết mình phát âm sai ở đâu qua những gam màu trực quan sinh động.</p>
+                    </div>
+                </div>
+                <div class="study_route__item">
+                    <div class="study_route__img">
+                        <img src="./assets/img/study_route/phone12_3.png" alt="img loading">
+                    </div>
+                    <div class="study_route__text">
+                        <p><b> CÔNG NGHỆ NHẬN DIỆN</b> giọng nói chuẩn đến từng âm tiết.</p>
+                    </div>
+                </div>
+                <div class="study_route__item">
+                    <div class="study_route__img">
+                        <img src="./assets/img/study_route/phone12_4.png" alt="img loading">
+                    </div>
+                    <div class="study_route__text">
+                        <p><b> ELSA sẽ LẬP LỘ TRÌNH HỌC CÁ NHÂN HOÁ</b> dựa trên các chỉ số bài kiểm tra đầu vào của bạn.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="study_route_btn">
+                <a href="#register__form">đăng ký ngay</a>
+            </div>
+        </div>
     </section>
     <script src="./main.js"></script>
 </body>

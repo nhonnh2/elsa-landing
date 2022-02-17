@@ -54,10 +54,10 @@ header .logo__content img {
 /* intro style */
 
 .intro {
-    height: 450px;
     margin-top: 100px;
     overflow: hidden;
     position: relative;
+    height: 450px;
 }
 
 .intro__bg {
@@ -80,39 +80,40 @@ header .logo__content img {
     right: 0;
 }
 
+.intro__bg .intro_media_img {
+    right: 12%;
+    bottom: -7%;
+}
+
+.intro__bg .intro_phone13_img {
+    bottom: 0;
+    right: 14.5%;
+}
+
 .intro__content {
-    display: flex;
     position: absolute;
     z-index: 100;
-    height: 100%;
-    width: 100%;
     text-align: center;
+    top: 13%;
+    left: 9%;
 }
 
-.intro__content .intro__left {
-    width: 55%;
-    padding: 5rem 5rem 6rem 0;
-}
-
-.intro__content .intro__img {
-    width: 45%;
-}
-
-.intro__content .intro__left * {
+.intro__content * {
     margin-bottom: 1.2rem;
 }
 
-.intro__content .intro__left h2 {
+.intro__content h2 {
     font-size: 2rem;
     text-transform: uppercase;
     color: black;
 }
 
-.intro__content .intro__left p {
+.intro__content p {
     color: var(--primary);
+    font-size: 1.25rem;
 }
 
-.intro__content .intro__left a {
+.intro__content a {
     text-decoration: none;
     font-size: 1.5rem;
     display: block;
@@ -129,40 +130,22 @@ header .logo__content img {
     transition: all 0.25s linear;
 }
 
-.intro__content .intro__left a:hover {
+.intro__content a:hover {
     background-position: right center;
     transform: scale(1.05);
-}
-
-.intro__content .intro__img {
-    position: relative;
-}
-
-.intro__content .intro__img img {
-    position: absolute;
-}
-
-.intro__content .intro__img .intro_media_img {
-    left: 5%;
-    bottom: -7%;
-}
-
-.intro__content .intro__img .intro_phone13_img {
-    bottom: 0;
-    left: 10%;
 }
 
 
 /* register style */
 
 .register {
-    background: #0c2440;
     height: 900px;
     overflow: hidden;
     position: relative;
 }
 
 .register .register__bg {
+    background: #0c2440;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -210,7 +193,6 @@ header .logo__content img {
 
 .register #register__form form {
     width: 38%;
-    height: 85%;
     border-radius: 20px;
     overflow: hidden;
     background: #fff;
@@ -222,7 +204,7 @@ header .logo__content img {
     height: 23%;
     background: linear-gradient(81.84deg, #49dce1 1.09%, #39a3fb 96.86%);
     box-shadow: 0px 4px 8px rgba(46, 153, 241, 0.5);
-    padding: 2rem 5rem;
+    padding: 1.8rem 3.5rem;
 }
 
 .register__header_form h2 {
@@ -233,7 +215,7 @@ header .logo__content img {
 }
 
 #register__form .register__body_form {
-    padding: 2rem;
+    padding: 1.9rem;
 }
 
 .register__body_form label {
@@ -241,10 +223,15 @@ header .logo__content img {
     color: var(--primary);
     font-size: 1.25rem;
     margin-bottom: 0.4rem;
+    position: relative;
 }
 
 .register__body_form label i {
     margin-right: 8px;
+}
+
+.register__body_form label .label_text::after {
+    content: ' *';
 }
 
 .register__body_form>div {
@@ -256,12 +243,34 @@ header .logo__content img {
     width: 100%;
     border: 1px solid #57b3ff;
     transition: all 0.3s ease-in-out;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     padding-left: 1rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+    /* Firefox */
 }
 
 .register__body_form input:focus {
     outline: 1px solid #00d9ff;
+}
+
+.register__body_form .field_err {
+    color: rgb(231, 95, 90);
+    position: absolute;
+    font-size: 1.15rem;
+    right: 5px;
+    top: 0;
+    font-style: italic;
 }
 
 .field_checkRadio {
@@ -333,6 +342,7 @@ header .logo__content img {
     color: #0bbae7;
     text-align: center;
     margin-top: 2.3rem;
+    margin-bottom: 0px !important;
 }
 
 .register__footer_form {
@@ -350,4 +360,314 @@ header .logo__content img {
     border-radius: 20px;
     font-size: 1.6rem;
     cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.register__footer_form button:hover {
+    background-position: right center;
+}
+
+
+/* study_route style */
+
+.study_route {
+    margin-top: 40px;
+    font-size: 1.35rem;
+}
+
+.study_route__container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.study_route .study_route__header {
+    padding-top: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.study_route__header h2 {
+    margin-bottom: 20px;
+    font-size: 2.6rem;
+    text-transform: uppercase;
+}
+
+.study_route__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.study_route__item {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.study_route .study_route__text {
+    margin-top: 40px;
+}
+
+.study_route__text p {
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+.study_route p b {
+    color: #0bbae7;
+}
+
+.study_route .study_route__img {
+    padding: 0 20px;
+}
+
+.study_route__img img {
+    width: 100%;
+}
+
+.study_route_btn a {
+    text-decoration: none;
+    display: block;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    text-align: center;
+    width: 24%;
+    font-weight: bold;
+    margin: 0 auto;
+    color: #fff;
+    background: linear-gradient( 90deg, rgba(255, 255, 255, 1) 0%, rgba(0, 178, 127, 1) 0%, rgba(4, 187, 229, 1) 100%);
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 40px;
+}
+
+.study_route_btn a:hover {
+    background: linear-gradient( 90deg, rgba(255, 255, 255, 1) 0%, rgba(0, 178, 127, 1) 0%, rgba(0, 146, 179, 1) 100%);
+}
+
+
+/* responsive */
+
+@media screen and (max-width: 1320px) {
+    header .logo__content {
+        padding: 0.5rem 0;
+    }
+    header .logo__content img {
+        transform: scale(0.8);
+    }
+    .intro {
+        height: 400px;
+    }
+    .intro__content h2 {
+        font-size: 1.7rem;
+    }
+    .intro__content p {
+        font-size: 1.1rem;
+    }
+    .intro__content a {
+        font-size: 1.3rem;
+        height: 45px;
+        line-height: 45px;
+    }
+    .intro__bg img {
+        transform: scale(0.9);
+    }
+    .intro__bg .intro_img_2 {
+        right: -10px;
+    }
+    .intro__bg .intro_img_1 {
+        left: -5px;
+    }
+    .intro__bg .intro_phone13_img {
+        bottom: -23px;
+    }
+    .register {
+        height: 850px;
+    }
+    .register #register__form form {
+        margin-top: 45px;
+        margin-left: 100px;
+    }
+    .register__header_form h2 {
+        font-size: 1.5rem;
+    }
+    .register #register__form .register__header_form {
+        padding: 1.6rem 2.6rem;
+    }
+    .register__body_form label {
+        font-size: 1.15rem;
+    }
+    .register__body_form input {
+        height: 42px;
+    }
+    [type='radio']:checked+label:before,
+    [type='radio']:not(:checked)+label:before {
+        width: 30px;
+        height: 30px;
+    }
+    [type='radio']:checked+label:after,
+    [type='radio']:not(:checked)+label:after {
+        width: 13px;
+        height: 12px;
+        top: 10.5px;
+        left: 10.5px;
+    }
+    [type='radio']:checked+label,
+    [type='radio']:not(:checked)+label {
+        line-height: 30px;
+        padding-left: 40px;
+        font-size: 1.1rem;
+    }
+    .register__body_form .field_err {
+        font-size: 1rem;
+        position: unset;
+    }
+    .form_price {
+        font-size: 1.2rem;
+        margin-top: 1.5rem;
+    }
+    .register__footer_form button {
+        height: 50px;
+        font-size: 1.3rem;
+    }
+    .register__bg img {
+        transform: scale(0.8);
+    }
+    .register__bg .register__img {
+        right: -60px;
+    }
+    .register__body_form>div {
+        margin-bottom: 1rem;
+    }
+    #register__form .register__body_form {
+        padding: 1.8rem;
+    }
+    .study_route {
+        margin-top: 30px;
+        font-size: 1.1rem;
+    }
+    .study_route__header h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    .study_route__text p {
+        line-height: 1.3em;
+    }
+    .study_route_btn a {
+        font-size: 1rem;
+        height: 50px;
+        line-height: 50px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    header .logo__content {
+        padding: 0.2rem 0;
+    }
+    header .logo__content img {
+        transform: scale(0.7);
+    }
+    .intro {
+        height: auto;
+    }
+    .intro__bg {
+        height: 400px;
+    }
+    .intro__content {
+        margin-top: 400px;
+        position: unset;
+        padding: 80px 0;
+    }
+    .intro__content h2 {
+        font-size: 1.5rem;
+    }
+    .intro__content p {
+        font-size: 1rem;
+    }
+    .intro__content a {
+        width: 180px;
+        font-size: 1.1rem;
+    }
+    .register {
+        height: auto;
+    }
+    .register .register__bg {
+        height: 800px;
+    }
+    .register__bg img {
+        transform: scale(0.68);
+    }
+    .register__bg .register__img {
+        right: -95px;
+    }
+    .register #register__form {
+        margin-top: 800px;
+        position: unset;
+    }
+    .register #register__form .register__header_form {
+        display: none;
+    }
+    .register #register__form form {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .register__body_form .field_err {
+        position: absolute;
+    }
+    .register__footer_form button {
+        display: block;
+        height: 50px;
+        font-size: 1.3rem;
+        width: 43%;
+        margin: 0 auto;
+    }
+    .register__footer_form {
+        padding: 0 2rem 2rem 2rem;
+    }
+    .study_route {
+        margin-top: 0px;
+        font-size: 1rem;
+    }
+    .study_route__header h2 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+    .study_route__item {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    .study_route_btn a {
+        width: 47%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .intro__bg .intro_phone13_img {
+        bottom: -50px;
+        right: 20.5%;
+    }
+    .register__footer_form button {
+        width: 50%;
+    }
+    .register__bg img {
+        transform: scale(0.55);
+    }
+    .register__bg .register__img {
+        right: -135px;
+    }
+    .register__bg .phone__15 {
+        right: -20%;
+    }
+    .study_route__item {
+        width: 100%;
+    }
+    .study_route__img img {
+        width: 90%;
+    }
+    .study_route__text p {
+        line-height: 2em;
+    }
+    .study_route_btn a {
+        width: 55%;
+    }
 }
