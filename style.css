@@ -670,6 +670,9 @@ input[type='number'] {
     .study_route_btn a {
         width: 55%;
     }
+    .field_err {
+        position: unset;
+    }
 }
 
 @media screen and (max-width: 500px) {
