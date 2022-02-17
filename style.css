@@ -670,7 +670,7 @@ input[type='number'] {
     .study_route_btn a {
         width: 55%;
     }
-    .field_err {
+    .register__body_form .field_err {
         position: unset;
     }
 }
